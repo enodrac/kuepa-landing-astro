@@ -4,4 +4,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://enodrac.github.io/kuepa-landing-astro/',
   base: 'kuepa-landing-astro',
+  integrations: [react()],
 });

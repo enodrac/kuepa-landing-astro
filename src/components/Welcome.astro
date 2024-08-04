@@ -1,0 +1,424 @@
+---
+import Animator from '../animator/animator';
+import graduatesV2 from '../../public/graduatesV2.png';
+---
+
+<div class={`mobile_welcome_container`}>
+    <div class={`animator_container`}>
+        <Animator
+            client:load
+            animation={`
+                frames: {
+                    frame_0: {
+                        '0_296478_frame_element': {
+                            left: '54px',
+                            top: '-61px',
+                            height: '269px',
+                            width: '269px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: 'var(--primary)',
+                            filter: 'blur(100px)',
+                        },
+                        '1_027877_frame_element': {
+                            left: '158px',
+                            top: '147px',
+                            height: '222px',
+                            width: '222px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: '#FF8A00',
+                            filter: 'blur(100px)',
+                        },
+                    },
+                    frame_1: {
+                        '0_296478_frame_element': {
+                            left: '-56px',
+                            top: '147px',
+                            height: '269px',
+                            width: '269px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: 'var(--primary)',
+                            filter: 'blur(100px)',
+                        },
+                        '1_027877_frame_element': {
+                            left: '146px',
+                            top: '12px',
+                            height: '222px',
+                            width: '222px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: '#FF8A00',
+                            filter: 'blur(100px)',
+                        },
+                    },
+                    frame_2: {
+                        '0_296478_frame_element': {
+                            left: '167px',
+                            top: '116px',
+                            height: '216px',
+                            width: '216px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: 'var(--primary)',
+                            filter: 'blur(100px)',
+                        },
+                        '1_027877_frame_element': {
+                            left: '12px',
+                            top: '-40px',
+                            height: '222px',
+                            width: '222px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: '#FF8A00',
+                            filter: 'blur(100px)',
+                        },
+                    },
+                    frame_3: {
+                        '0_296478_frame_element': {
+                            left: '95px',
+                            top: '-17px',
+                            height: '170px',
+                            width: '170px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: 'var(--primary)',
+                            filter: 'blur(100px)',
+                        },
+                        '1_027877_frame_element': {
+                            left: '42px',
+                            top: '269px',
+                            height: '197px',
+                            width: '197px',
+                            borderRadius: '100%',
+                            transition: 'all 3.3s ease-out',
+                            WebkitTransitionDuration: 'all 3.3s ease-out',
+                            MozTransitionDuration: 'all 3.3s ease-out',
+                            msTransitionDuration: 'all 3.3s ease-out',
+                            backgroundColor: '#FF8A00',
+                            filter: 'blur(100px)',
+                        },
+                    },
+                },
+                time: '3300',
+                canvasHeight: '740px',
+                canvasWidth: '360px',
+                currentFrame: 'frame_0',
+            `}
+        />
+    </div>
+    <div class={`initial_container`}>
+        <div class={`text_container`}>
+            <div class={`top_text`}>
+                En <span class={`special_text`}>Kuepa</span> inicias tu camino profesional.
+            </div>
+            <div class={`bottom_text`}>Nuestros programas te preparan para encontrar el empleo de tus sueños.</div>
+        </div>
+        <div class={`container_ fade_from_bottom`}>
+            <div class={`image_container`}>
+                <img src={graduatesV2.src} alt="" />
+            </div>
+            <div class={`register_container`}>
+                <div class={`form_title`}>¡Regístrate ahora o llámanos al 601 917 7888!</div>
+                <div class={`top_container`}>
+                    <div class={`custom_input_container`}>
+                        <div class={`custom_label`}>Nombre</div>
+                        <div class={`custom_input`}>
+                            <input type={`text`} name={`name`} placeholder="Ej: Nombres y apellidos" />
+                        </div>
+                    </div>
+                    <div class={`custom_input_container`}>
+                        <div class={`custom_label`}>Correo</div>
+                        <div class={`custom_input`}>
+                            <input type={`text`} name={`mail`} placeholder="tunombre@correoelectrónico.com" />
+                        </div>
+                    </div>
+                    <div class={`custom_input_container`}>
+                        <div class={`custom_label`}>Telefono</div>
+                        <div class={`custom_input`}>
+                            <input type={`text`} name={`phone`} placeholder="Ej: 316 789 9876" />
+                        </div>
+                    </div>
+                </div>
+                <div class={`bottom_container`}>
+                    <div class={`custom_input_container`}>
+                        <div class={`custom_label`}>Programa</div>
+                        <div class={`custom_input`}>
+                            <select aria-label="select-program" name={`program`}>
+                                <option label="Seleccionar programa" selected disabled value="" style={{color: '#333639'}}
+                                    >Seleccionar programa</option
+                                >
+                                <option label="Bachillerato Virtual" value='{"id_panel": "43", "id_crm":"bachillerato-plus-online"}'
+                                    >Bachillerato Virtual</option
+                                >
+                                <option label="Bachillerato Presencial" value='{"id_panel": "43", "id_crm":"bachillerato-plus-onsite"}'
+                                    >Bachillerato Presencial</option
+                                >
+                                <option label="Inglés" value='{"id_panel": "19", "id_crm":"ingles-intensivo" }'>Inglés</option>
+                                <option label="PreIcfes" value='{"id_panel": "3", "id_crm": "preicfes" }'>PreIcfes</option>
+                                <option label="Técnicos Laborales" value='{"id_panel": "44", "id_crm":"6279265fdb9de50f6405ad9d" }'
+                                    >Técnicos Laborales</option
+                                >
+                            </select>
+                        </div>
+                    </div>
+                    <div class={`register_button`}>Regístrate ahora</div>
+                </div>
+                <div class={`terms_text`}>
+                    *Al hacer click, acepto los <span><a href="/legal-page">términos y condiciones</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .mobile_welcome_container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        margin-bottom: 140px;
+
+        .animator_main_container {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100vw !important;
+
+            .animator_canvas {
+                overflow: visible;
+            }
+        }
+
+        .initial_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+
+            .text_container {
+                width: 360px;
+                margin-top: 16px;
+
+                .top_text {
+                    color: #fff;
+                    text-align: center;
+                    font-family: 'Poppins';
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    margin-bottom: 16px;
+
+                    .special_text {
+                        background: linear-gradient(90deg, #fe8c00 0%, #f83600 48%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-family: 'Poppins';
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                    }
+                }
+
+                .bottom_text {
+                    color: #fff;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+
+            .container_ {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image_container {
+                img {
+                    width: 266px;
+                    height: 309px;
+                }
+
+                margin-bottom: -110px;
+            }
+
+            .register_container {
+                width: 327px;
+                padding: 24px;
+                border-radius: 16px;
+                background: linear-gradient(95deg, rgba(255, 255, 255, 0.6) 5.21%, rgba(255, 255, 255, 0.8) 83.78%);
+                box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(30px);
+
+                .form_title {
+                    text-align: center;
+                    font-family: 'Poppins';
+                    padding: 0 10px;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                    background: linear-gradient(90deg, #fe8c00 -58.89%, #f83600 99.96%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .custom_input_container {
+                    margin-top: 16px;
+
+                    .custom_input {
+                        width: 282px;
+                        height: 24px;
+                        display: flex;
+                        height: 40px;
+                        padding: 8px 16px;
+                        align-items: center;
+                        align-self: stretch;
+                        border-radius: 16px;
+                        border: 1px solid #cfd1d6;
+                        background: #f0f1f2;
+
+                        input {
+                            outline: none;
+                            border: none;
+                            width: 100%;
+                            background-color: transparent;
+
+                            &::placeholder {
+                                color: #333639;
+                            }
+                        }
+                    }
+
+                    .custom_label {
+                        color: #1a1c1d;
+                        font-family: 'Poppins';
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 18px;
+                    }
+                }
+
+                .top_container {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                .bottom_container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    select {
+                        width: 100%;
+                        border: none;
+                        background-color: transparent;
+                        outline: none;
+                        -webkit-appearance: none;
+                    }
+
+                    .register_button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 279px;
+                        height: 42px;
+                        padding: 7px 24px;
+                        flex-shrink: 0;
+                        margin-top: 24px;
+                        border-radius: 16px;
+                        background: #fd531e;
+                        cursor: pointer;
+
+                        color: #fff;
+                        text-align: center;
+                        font-family: 'Poppins';
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 20px;
+                    }
+                }
+
+                .terms_text {
+                    margin-top: 12px;
+
+                    color: #292929;
+                    text-align: center;
+                    font-family: 'Poppins';
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 18px;
+
+                    span {
+                        color: #292929;
+                        font-family: 'Poppins';
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 18px;
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+
+            .fade_from_bottom {
+                animation-duration: 1s;
+                animation-name: fadeFromBottom;
+                animation-timing-function: ease-out;
+            }
+        }
+    }
+
+    @keyframes fadeFromBottom {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
