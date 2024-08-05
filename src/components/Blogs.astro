@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <div class={`mobile_blogs_container`}>
@@ -7,7 +8,7 @@
         Mantente informado con nuestras noticias, comunicados, datos curiosos, cultura general e información
         <div>de tu interés.</div>
     </div>
-    <div id={`scroll_cards_container`} class={`cards_container`}></div>
+    <div id={`blogs_cards_container`} class={`cards_container`}></div>
     <div class={`blogs_carrousel_navigation`}>
         <div id={`blogs_navigation_0`} class={`blogs_navigation`}></div>
         <div id={`blogs_navigation_1`} class={`blogs_navigation`}></div>
@@ -16,6 +17,7 @@
 </div>
 
 <script>
+    let blogs_cards_container = document.getElementById('blogs_cards_container');
     /*
        <div class={`custom_card`}>
                     <div class={`background_image`}>
