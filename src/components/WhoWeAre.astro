@@ -1,0 +1,155 @@
+---
+import ketKuepaEduTechLogoV2 from '../../public/ketKuepaEduTechLogoV2.png';
+---
+
+<div class={`mobile_who_we_are_container `}>
+    <div class={`container fade_from_bottom`}>
+        <div class={`logo`}>
+            <img src={ketKuepaEduTechLogoV2.src} alt="" width="312px" height="53px" />
+        </div>
+        <div class={`top_text`}>¿Quiénes somos?</div>
+        <div class={`bottom_text`}>
+            <span class={'heavy'}>Kuepa</span> es una institución educativa, parte de <span class={'heavy'}>Kuepa Edutech</span>, una <span
+                class={'heavy'}>EdTech</span
+            > colombiana entre las más influyentes de la región, prueba de ello es la selección hecha por la revista <span class={'special'}
+                >Time</span
+            > como una de las <span class={'heavy'}>250 EdTech más importantes en el mundo en 2.023 en la posición 68</span>. Además, la única
+            colombiana en el listado.
+            <div>Si quieres saber más</div>
+        </div>
+        <div class={`custom_button`}>
+            <div class={`inner_text`}>Visita Kuepa Edutech</div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .mobile_who_we_are_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 655px;
+        flex-shrink: 0;
+        background: #1a1c1d;
+
+        .logo {
+            margin-top: 112px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 655px;
+            opacity: 0;
+        }
+
+        .fade_from_bottom {
+            animation-duration: 1s;
+            animation-name: fadeFromBottom;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .top_text {
+            margin-top: 22px;
+            display: flex;
+            width: 280px;
+            height: 76px;
+            flex-direction: column;
+            justify-content: center;
+
+            color: #fff;
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+        }
+
+        .bottom_text {
+            height: 216px;
+            width: 307px;
+
+            color: #fff;
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+
+            .heavy {
+                color: #fff;
+                font-family: 'Poppins';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+            }
+
+            .special {
+                color: #fd531e;
+                font-family: 'Poppins';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+                text-decoration-line: underline;
+            }
+        }
+
+        .custom_button {
+            display: flex;
+            width: 312px;
+            height: 42px;
+            margin-top: 40px;
+            white-space: nowrap;
+            padding: 7px 24px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            border: 1.5px solid#FD531E;
+            box-shadow: 0px 6px 16px 0px rgba(10, 66, 87, 0.08);
+
+            color: #fd531e;
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+
+            &:hover {
+                position: relative;
+                overflow: hidden;
+
+                .inner_text {
+                    z-index: 2;
+                    animation-duration: 1s;
+                    color: white;
+                    animation-name: fadeToColorWhite;
+                }
+
+                &::after {
+                    display: flex;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    z-index: 1;
+                    transform: translate(-50%);
+                    background: linear-gradient(90deg, #fe8c00 22.7%, #f83600 100%);
+                    height: 100%;
+                    width: 110%;
+                    align-items: center;
+                    justify-content: center;
+                    animation-duration: 0.5s;
+                    animation-name: expand;
+                }
+            }
+        }
+    }
+</style>

@@ -1,0 +1,191 @@
+---
+import methodologyM1 from '../../public/methodologyM1.svg';
+import methodologyM2 from '../../public/methodologyM2.svg';
+import methodologyM3 from '../../public/methodologyM3.svg';
+import methodologyM4 from '../../public/methodologyM4.svg';
+---
+
+<div class={`mobile_methodology_container`}>
+    <div class={`title`}>Metodología</div>
+    <div class={`subtitle`}>
+        <div class={`top`}>
+            La metodología Kuepa combina tecnología de punta, modelos pedagógicos contemporáneos y análisis de datos para lograr la combinación de
+            calidad y asequibilidad que necesitas en tu formación.
+        </div>
+        <div class={`bottom`}>Aquí te contamos las 4 claves de nuestro modelo académico:</div>
+    </div>
+    <div id={`methodoly_custom_carrousel`} class={`methodoly_custom_carrousel`}>
+        <div id={`methodology_card_last`} class={`first ignored`}>
+            <img class={`background_img`} src={methodologyM4.src} alt="" />
+        </div>
+        <div id={`methodology_card_1`} class={`methodology_card active`}>
+            <img class={`background_img`} src={methodologyM1.src} alt="" />
+        </div>
+        <div id={`methodology_card_2`} class={`methodology_card`}>
+            <img class={`background_img`} src={methodologyM2.src} alt="" />
+        </div>
+        <div id={`methodology_card_3`} class={`methodology_card`}>
+            <img class={`background_img`} src={methodologyM3.src} alt="" />
+        </div>
+        <div id={`methodology_card_4`} class={`methodology_card`}>
+            <img class={`background_img`} src={methodologyM4.src} alt="" />
+        </div>
+        <div id={`methodology_card_first`} class={`ignored`}>
+            <img class={`background_img`} src={methodologyM1.src} alt="" />
+        </div>
+    </div>
+    <div class={`carrousel_navigation`}>
+        <div id={`methodology_navigation_1`} class={`methodology_navigation active`}></div>
+        <div id={`methodology_navigation_2`} class={`methodology_navigation`}></div>
+        <div id={`methodology_navigation_3`} class={`methodology_navigation`}></div>
+        <div id={`methodology_navigation_4`} class={`methodology_navigation`}></div>
+    </div>
+</div>
+
+<script>
+    let methodologyCarrousel = document.getElementById('methodoly_custom_carrousel');
+    methodologyCarrousel?.addEventListener('scroll', () => {
+        if (methodologyCarrousel) {
+            [...document.getElementsByClassName(`methodology_navigation`)]?.map((item) => {
+                item.classList.remove('active');
+            });
+            [...document.getElementsByClassName(`methodology_card`)]?.map((item) => {
+                item.classList.remove('active');
+            });
+            let navigation =
+                Math.floor(methodologyCarrousel?.scrollLeft / ((methodologyCarrousel?.scrollWidth - methodologyCarrousel?.offsetWidth) / 3.5)) + 1;
+            document.getElementById(`methodology_navigation_${navigation}`).classList.add('active');
+            document.getElementById(`methodology_card_${navigation}`).classList.add('active');
+        }
+    });
+    document.getElementById('methodology_card_last')?.addEventListener('click', () => {
+        methodologyCarrousel.scrollLeft = methodologyCarrousel.scrollWidth;
+    });
+    document.getElementById('methodology_card_first')?.addEventListener('click', () => {
+        methodologyCarrousel.scrollLeft = 0;
+    });
+    [...document.getElementsByClassName('methodology_card')]?.map((item, index) => {
+        item?.addEventListener('click', () => {
+            let navigation = (methodologyCarrousel.scrollWidth - methodologyCarrousel.offsetWidth) / 3;
+            methodologyCarrousel.scrollLeft = index * navigation;
+        });
+    });
+    [...document.getElementsByClassName('methodology_navigation')]?.map((item, index) => {
+        item?.addEventListener('click', () => {
+            let navigation = (methodologyCarrousel.scrollWidth - methodologyCarrousel.offsetWidth) / 3;
+            methodologyCarrousel.scrollLeft = index * navigation;
+        });
+    });
+</script>
+
+<style>
+    .mobile_methodology_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 992px;
+        flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
+
+        .title {
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 44px;
+            margin-bottom: 24px;
+
+            background: var(--gradient-1, linear-gradient(90deg, #fe8c00 0%, #f83600 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            width: 320px;
+            color: #fff;
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 54px;
+
+            .top {
+                margin-bottom: 16px;
+            }
+        }
+
+        .methodoly_custom_carrousel {
+            display: flex;
+            width: 100%;
+            position: relative;
+            overflow: auto;
+            scroll-behavior: smooth;
+
+            .background_img {
+                min-width: 267px;
+                min-height: 451px;
+            }
+
+            .methodology_card {
+                transform: scale(0.9);
+                transition: all 0.5s;
+            }
+
+            .ignored {
+                transform: scale(0.9);
+                position: relative;
+                width: 0;
+                overflow: hidden;
+
+                .background_img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                &:first-child {
+                    padding-left: 13%;
+                }
+
+                &:last-child {
+                    padding-right: 15%;
+                    margin-left: 12px;
+
+                    .background_img {
+                        left: 0;
+                    }
+                }
+            }
+
+            .active {
+                margin-left: 12px;
+                transform: scale(1);
+            }
+        }
+
+        .carrousel_navigation {
+            display: flex;
+
+            .methodology_navigation {
+                width: 16px;
+                height: 16px;
+                margin: 12px;
+                border-radius: 100%;
+                border: 2px solid white;
+                cursor: pointer;
+
+                &.active {
+                    border-color: #fd531e;
+                    background-color: #fd531e;
+                }
+            }
+        }
+    }
+</style>

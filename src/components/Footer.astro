@@ -1,0 +1,159 @@
+---
+import kuepaLogo from '../../public/kuepaLogo.svg';
+import instagramLogo from '../../public/instagramLogo.svg';
+import facebookLogo from '../../public/facebookLogo.svg';
+import tiktokLogo from '../../public/tiktokLogo.svg';
+import linkedInLogo from '../../public/linkedInLogo.svg';
+import footerLogos from '../../public/footerLogos.svg';
+---
+
+<div class={`mobile_footer_container`}>
+    <div class={`main_component`}>
+        <div class={`top_icon`}>
+            <img src={kuepaLogo.src} alt="" width={'200px'} height={'57px'} />
+        </div>
+        <div class={`text_container`}>
+            <div class={`custom_text_bold`}>Nuestros programas</div>
+            <div class={`custom_text`}>Técnico Laboral en Auxiliar Administrativo</div>
+            <div class={`custom_text`}>Técnico Laboral en Mercadeo y Ventas</div>
+            <div class={`custom_text`}>Bachillerato semipresencial</div>
+            <div class={`custom_text`}>Bachillerato presencial</div>
+        </div>
+        <div class={`text_container`}>
+            <div class={`custom_text_bold`}>Metodología</div>
+            <div class={`custom_text_bold`}>Blog Kueparlantes</div>
+            <div class={`custom_text_bold`}>
+                <a href="/legal" target="_blank" rel="noreferrer" aria-label="legal"> Políticas de privacidad </a>
+            </div>
+            <div class={`custom_text_bold`}>
+                <a href="https://docs.google.com/forms/d/1HWLQ7HezUhg8-UjBi4JSG-iPxfhRKUfBHcPFapuXgbQ/prefill" aria-label="docs"> PQRS </a>
+            </div>
+        </div>
+        <div class={`custom_text_bold`} style={{fontWeight: '500'}}>Síguenos en:</div>
+        <div class={`network_container`}>
+            <a
+                href={`https://www.instagram.com/kuepaedutech/`}
+                target="_blank"
+                rel="noreferrer"
+                class={`network_item custom_text`}
+                aria-label="isntagram"
+            >
+                <div class={`icon_container`}>
+                    <img src={instagramLogo.src} alt="" width={'24px'} height={'24px'} />
+                </div>
+            </a>
+            <a
+                href={`https://www.facebook.com/kuepaedutech`}
+                target="_blank"
+                rel="noreferrer"
+                class={`network_item custom_text`}
+                aria-label="facebook"
+            >
+                <div class={`icon_container`}>
+                    <img src={facebookLogo.src} alt="" width={'24px'} height={'24px'} />
+                </div>
+            </a>
+            <a href={`https://www.tiktok.com/@kuepaedutech?`} target="_blank" rel="noreferrer" class={`network_item custom_text`} aria-label="tiktok">
+                <div class={`icon_container`}>
+                    <img src={tiktokLogo.src} alt="" width={'24px'} height={'24px'} />
+                </div>
+            </a>
+            <a
+                href={`https://www.linkedin.com/company/kuepa-edutech/mycompany/`}
+                target="_blank"
+                rel="noreferrer"
+                class={`network_item custom_text`}
+                aria-label="linkedin"
+            >
+                <div class={`icon_container`}>
+                    <img src={linkedInLogo.src} alt="" width={'24px'} height={'24px'} />
+                </div>
+            </a>
+        </div>
+        <div class={`bottom_icon`}>
+            <img src={footerLogos.src} alt="" width={'121px'} height={'74px'} />
+        </div>
+    </div>
+    <div class={`bottom_container`}>Copyright 2024. Todos los derechos reservados.</div>
+</div>
+
+<script>
+    /*
+onClick={() => handleScroll({id: 'our_programs', offset: -160})}
+onClick={() => handleScroll({id: 'methodology', offset: 70})}
+onClick={() => handleScroll({id: 'blogs', offset: -50})}
+    */
+</script>
+
+<style>
+    .mobile_footer_container {
+        width: 100%;
+
+        .main_component {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 32px;
+            width: 100%;
+            height: 667px;
+            flex-shrink: 0;
+            background-color: #333639;
+
+            .top_icon {
+                margin-bottom: 16px;
+            }
+
+            .custom_text_bold {
+                cursor: pointer;
+                color: #fff;
+                font-family: 'Barlow';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 24px;
+
+                &:first-child {
+                    margin-bottom: 16px;
+                }
+            }
+
+            .custom_text {
+                cursor: pointer;
+                color: #fff;
+                font-family: 'Nunito';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 16px;
+            }
+
+            .network_container {
+                display: flex;
+            }
+
+            .network_item {
+                display: flex;
+                align-items: center;
+
+                .icon_container {
+                    margin-right: 24px;
+                }
+            }
+        }
+
+        .bottom_container {
+            display: flex;
+            justify-content: center;
+            margin: 21px 0;
+            color: #fff;
+            text-align: center;
+            font-family: 'Barlow';
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+</style>

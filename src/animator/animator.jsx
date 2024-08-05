@@ -546,15 +546,18 @@ const Animator = (props) => {
     };
 
     const handleSave = () => {
-        console.log('Enodrac - animacion:', {
-            frames: animation?.frames,
-            ...{
-                time: animation?.time,
-                canvasHeight: animation?.canvasHeight,
-                canvasWidth: animation?.canvasWidth,
-                currentFrame: 'frame_0',
-            },
-        });
+        console.log(
+            'Enodrac - animacion:',
+            JSON.stringify({
+                frames: animation?.frames,
+                ...{
+                    time: animation?.time,
+                    canvasHeight: animation?.canvasHeight,
+                    canvasWidth: animation?.canvasWidth,
+                    currentFrame: 'frame_0',
+                },
+            })
+        );
     };
 
     return animation?.incoming !== undefined ? (

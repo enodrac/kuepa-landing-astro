@@ -1,0 +1,155 @@
+---
+---
+
+<div class={`mobile_blogs_container`}>
+    <div class={`title`}>Blog Kueparlantes</div>
+    <div class={`subtitle`}>
+        Mantente informado con nuestras noticias, comunicados, datos curiosos, cultura general e información
+        <div>de tu interés.</div>
+    </div>
+    <div id={`scroll_cards_container`} class={`cards_container`}></div>
+    <div class={`blogs_carrousel_navigation`}>
+        <div id={`blogs_navigation_0`} class={`blogs_navigation`}></div>
+        <div id={`blogs_navigation_1`} class={`blogs_navigation`}></div>
+        <div id={`blogs_navigation_2`} class={`blogs_navigation`}></div>
+    </div>
+</div>
+
+<script>
+    /*
+       <div class={`custom_card`}>
+                    <div class={`background_image`}>
+                        <img src={blog?.image_post} alt="" width="311px" height="160px" />
+                    </div>
+                    <div class={`top_text`}>{blog?.title}</div>
+                    <div class={`middle_text`}>{blog?.description}</div>
+                    <div class={`bottom_text`}>
+                        <a href={blog?.redirect_url} target="_blank" rel="noreferrer">
+                            Seguir leyendo
+                        </a>
+                    </div>
+                </div>
+    */
+</script>
+
+<style>
+    .mobile_blogs_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 583px;
+        flex-shrink: 0;
+        margin: 50px auto 170px auto;
+        padding: 0 20px;
+
+        .title {
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            background: linear-gradient(90deg, #fe8c00 0%, #f83600 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            width: 312px;
+            color: #fff;
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 24px;
+        }
+
+        .cards_container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            scroll-behavior: smooth;
+            margin: 0 auto;
+            overflow: auto;
+            height: 370px;
+            min-height: 370px;
+            margin-bottom: 12px;
+
+            .custom_card {
+                display: flex;
+                width: 311px;
+                min-width: 311px;
+                height: 364px;
+                overflow: hidden;
+                margin-right: 8px;
+                transition: all 0.6s;
+                flex-direction: column;
+                border-radius: 16px;
+                background: #292929;
+
+                .background_image {
+                    img {
+                        object-fit: cover;
+                    }
+                }
+
+                .top_text {
+                    margin: auto 24px;
+                    color: #fd531e;
+                    color: white;
+                    font-family: 'Poppins';
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 20px;
+                }
+
+                .middle_text {
+                    margin: auto 24px;
+                    max-height: 100px;
+                    overflow: hidden;
+                    color: #fff;
+                    text-overflow: ellipsis;
+                    font-family: 'Poppins';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                }
+
+                .bottom_text {
+                    margin: auto 24px;
+                    cursor: pointer;
+                    color: #fff;
+                    font-family: 'Poppins';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+
+        .blogs_carrousel_navigation {
+            display: flex;
+
+            .blogs_navigation {
+                width: 16px;
+                height: 16px;
+                margin: 12px;
+                border-radius: 100%;
+                border: 2px solid white;
+                cursor: pointer;
+
+                &.active {
+                    border-color: #fd531e;
+                    background-color: #fd531e;
+                }
+            }
+        }
+    }
+</style>
